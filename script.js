@@ -1,7 +1,7 @@
 // Glamveda Watermelon & Collagen Storefront with Amazon/Flipkart-Style Cart, Buy Now & Address Checkout
 (() => {
   // Optional: Add your WhatsApp number without '+' (e.g. "919876543210")
-  const WHATSAPP_NUMBER = "917992444548";
+  const WHATSAPP_NUMBER = "";
 
   const PRODUCTS = {
     combo: {
