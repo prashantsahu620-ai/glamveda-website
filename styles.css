@@ -506,6 +506,53 @@ img, video {
   margin: 0;
 }
 
+/* Single Product Showcase Card */
+.single-product-card {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  background: var(--bg-card);
+  border: 2px solid rgba(216, 49, 91, 0.35);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.single-product-media {
+  position: relative;
+  background: #fde8ef;
+}
+
+.single-product-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-product-info {
+  padding: 32px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.single-product-info h3 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.single-product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
 /* Amazon / Flipkart Shop Grid */
 .shop-grid {
   display: grid;
@@ -751,6 +798,10 @@ img, video {
   padding: 5px 8px;
   border-radius: 999px;
   text-align: center;
+}
+
+.gallery-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /* Final CTA */
@@ -1287,6 +1338,7 @@ img, video {
 
 @media (max-width: 980px) {
   .hero-grid,
+  .single-product-card,
   .shop-grid,
   .benefits-grid,
   .ritual-grid,

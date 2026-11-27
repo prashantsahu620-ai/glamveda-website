@@ -1,32 +1,16 @@
 // Glamveda Watermelon & Collagen Storefront with Amazon/Flipkart-Style Cart, Buy Now & Address Checkout
 (() => {
-  // Optional: Add your WhatsApp number without '+' (e.g. "919876543210")
+  // Keep empty for privacy — or use private Google Sheet / Telegram / Instagram DM order flow
   const WHATSAPP_NUMBER = "";
 
   const PRODUCTS = {
     combo: {
       id: "combo",
-      name: "Watermelon & Collagen Combo (Face Wash 100ml + Peel Off Mask 100gm)",
-      shortName: "Watermelon & Collagen Combo",
-      price: 399,
-      mrp: 549,
-      img: "assets/hero-combo.webp",
-    },
-    facewash: {
-      id: "facewash",
-      name: "Watermelon & Collagen Face Wash (100ml)",
-      shortName: "Face Wash (100ml)",
-      price: 229,
-      mrp: 299,
-      img: "assets/scene2-podium.jpg",
-    },
-    mask: {
-      id: "mask",
-      name: "Watermelon & Collagen Peel Off Mask (100gm.)",
-      shortName: "Peel Off Mask (100gm.)",
-      price: 249,
-      mrp: 320,
-      img: "assets/scene5-hero.jpg",
+      name: "Glamveda® Rice & Ceramide Korean Glass Skin Combo (Face Wash 100ml + Peel Off Mask 100gm)",
+      shortName: "Rice & Ceramide Combo",
+      price: 262,
+      mrp: 550,
+      img: "assets/rice-ceramide-combo.webp",
     },
   };
 
@@ -34,7 +18,7 @@
   const STORAGE_ADDR = "glamveda_saved_address_v1";
   const STORAGE_ORDERS = "glamveda_orders_v1";
 
-  let cart = loadJson(STORAGE_CART, []);
+  let cart = loadJson(STORAGE_CART, []).filter((i) => PRODUCTS[i.id]);
   let checkoutItems = [];
   let currentAddress = loadJson(STORAGE_ADDR, null);
   let orders = loadJson(STORAGE_ORDERS, []);
